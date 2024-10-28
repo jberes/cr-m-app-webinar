@@ -92,9 +92,6 @@ export default function AccountSample() {
         <div className={classes("row-layout group_7")}>
           <div className={classes("column-layout group_8")}>
             <IgrTabs className={classes("tabs")}>
-              <IgrTab selected="true" key={uuid()}>
-                <span key={uuid()}>Related</span>
-              </IgrTab>
               <IgrTabPanel className={classes("column-layout tab-item-content")} key={uuid()}>
                 <div className={classes("row-layout buttons-1")} key={uuid()}>
                   <IgrButton variant="flat" className={classes("button")}>
@@ -259,8 +256,11 @@ export default function AccountSample() {
                   </IgrExpansionPanel>
                 </IgrAccordion>
               </IgrTabPanel>
-              <IgrTab disabled="true" key={uuid()}>
-                <span key={uuid()}>Details</span>
+              <IgrTab selected="true" key={uuid()}>
+                <span className={classes("material-icons")} key={uuid()}>
+                  <span key={uuid()}>info</span>
+                </span>
+                <span key={uuid()}>Related</span>
               </IgrTab>
               <IgrTabPanel className={classes("row-layout tab-item-content_1")} key={uuid()}>
                 <div className={classes("row-layout demo-content")} key={uuid()}>
@@ -271,7 +271,10 @@ export default function AccountSample() {
                 </div>
               </IgrTabPanel>
               <IgrTab disabled="true" key={uuid()}>
-                <span key={uuid()}>News</span>
+                <span className={classes("material-icons")} key={uuid()}>
+                  <span key={uuid()}>info</span>
+                </span>
+                <span key={uuid()}>Details</span>
               </IgrTab>
               <IgrTabPanel className={classes("row-layout tab-item-content_1")} key={uuid()}>
                 <div className={classes("row-layout demo-content-1")} key={uuid()}>
@@ -281,13 +284,16 @@ export default function AccountSample() {
                   </p>
                 </div>
               </IgrTabPanel>
+              <IgrTab disabled="true" key={uuid()}>
+                <span className={classes("material-icons")} key={uuid()}>
+                  <span key={uuid()}>info</span>
+                </span>
+                <span key={uuid()}>News</span>
+              </IgrTab>
             </IgrTabs>
           </div>
           <div className={classes("column-layout group_14")}>
             <IgrTabs className={classes("tabs")}>
-              <IgrTab selected="true" key={uuid()}>
-                <span key={uuid()}>Activity</span>
-              </IgrTab>
               <IgrTabPanel className={classes("column-layout tab-item-content_2")} key={uuid()}>
                 <div className={classes("column-layout group_15")} key={uuid()}>
                   <div className={classes("row-layout buttons")}>
@@ -418,8 +424,11 @@ export default function AccountSample() {
                   </IgrAccordion>
                 </div>
               </IgrTabPanel>
-              <IgrTab disabled="true" key={uuid()}>
-                <span key={uuid()}>Conversations</span>
+              <IgrTab selected="true" key={uuid()}>
+                <span className={classes("material-icons")} key={uuid()}>
+                  <span key={uuid()}>info</span>
+                </span>
+                <span key={uuid()}>Activity</span>
               </IgrTab>
               <IgrTabPanel className={classes("row-layout tab-item-content_3")} key={uuid()}>
                 <div className={classes("column-layout demo-content-1")} key={uuid()}>
@@ -429,6 +438,12 @@ export default function AccountSample() {
                   </p>
                 </div>
               </IgrTabPanel>
+              <IgrTab disabled="true" key={uuid()}>
+                <span className={classes("material-icons")} key={uuid()}>
+                  <span key={uuid()}>info</span>
+                </span>
+                <span key={uuid()}>Conversations</span>
+              </IgrTab>
             </IgrTabs>
           </div>
         </div>

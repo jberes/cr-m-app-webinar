@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { getMeetingsTasksList } from '../services/crmapp-data';
-import { MeetingsTasksType } from '../models/CRMAppData/meetings-tasks-type';
+import { getMeetingsTasksList } from '../services/crmapp';
+import { MeetingsTasksType } from '../models/CRMApp/meetings-tasks-type';
 
 export const useGetMeetingsTasksList = () => {
   const [meetingsTasks, setMeetingsTasks] = useState<MeetingsTasksType[]>([]);
@@ -22,5 +22,5 @@ export const useGetMeetingsTasksList = () => {
     requestMeetingsTasks();
   }, [requestMeetingsTasks]);
 
-  return { requestCRMAppDataMeetingsTasks: requestMeetingsTasks, cRMAppDataMeetingsTasks: meetingsTasks, setCRMAppDataMeetingsTasks: setMeetingsTasks };
+  return { requestCRMAppMeetingsTasks: requestMeetingsTasks, cRMAppMeetingsTasks: meetingsTasks, setCRMAppMeetingsTasks: setMeetingsTasks };
 }
