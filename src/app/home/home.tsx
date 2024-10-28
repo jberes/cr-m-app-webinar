@@ -3,7 +3,7 @@ import { IgrCategoryChart, IgrCategoryChartModule } from 'igniteui-react-charts'
 import { IgrColumn, IgrGrid, IgrGridModule } from 'igniteui-react-grids';
 import { useNavigate } from 'react-router-dom';
 import { useGetCustomers } from '../hooks/northwind-hooks';
-import { useGetMeetingsTasksList } from '../hooks/crmapp-data-hooks';
+import { useGetMeetingsTasksList } from '../hooks/crmapp-hooks';
 import { useGetRevenueList } from '../hooks/ecommerce-hooks';
 import 'igniteui-react-grids/grids';
 import styles from './home.module.css';
@@ -21,7 +21,7 @@ export default function Home() {
   const navigate = useNavigate();
   const { eCommerceRevenue } = useGetRevenueList();
   const { northwindCustomers } = useGetCustomers();
-  const { cRMAppDataMeetingsTasks } = useGetMeetingsTasksList();
+  const { cRMAppMeetingsTasks } = useGetMeetingsTasksList();
 
   return (
     <>
@@ -154,7 +154,7 @@ export default function Home() {
                 <span>My Meetings</span>
               </p>
               <IgrList className={classes("list")}>
-                {cRMAppDataMeetingsTasks?.map((item) => (
+                {cRMAppMeetingsTasks?.map((item) => (
                   <IgrListItem key={uuid()}>
                     <div slot="start" key={uuid()}>
                       <IgrAvatar src="/src/assets/Calendar-Avatar-Icon.svg" className={classes("avatar avatar_3")} key={uuid()}></IgrAvatar>
@@ -197,7 +197,7 @@ export default function Home() {
                 <span>Today’s Tasks</span>
               </p>
               <IgrList className={classes("list")}>
-                {cRMAppDataMeetingsTasks?.map((item) => (
+                {cRMAppMeetingsTasks?.map((item) => (
                   <IgrListItem key={uuid()}>
                     <div slot="start" key={uuid()}>
                       <IgrAvatar src="/src/assets/Tasks-Avatar-Icon.svg" className={classes("avatar avatar_4")} key={uuid()}></IgrAvatar>
